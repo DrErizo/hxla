@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cmake . -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE
+cmake . -Bbuild -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE
 
-cmake --build build
+cmake --build build -v
 cd build
 ./hxla
 cd ..
